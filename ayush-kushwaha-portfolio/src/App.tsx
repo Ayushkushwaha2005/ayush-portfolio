@@ -369,7 +369,11 @@ export default function App() {
                 </div>
                 <h4 className="text-lg font-semibold text-white tracking-tight">Professional Narrative</h4>
                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
-                  Ayush is a dedicated Computer Science student specializing in **Cybersecurity and Forensics** with a minor in **AI System development**. His design ethos balances robust security architectures with intuitive user experience, bridging the gap between rigorous systems optimization and high-fidelity front-ends.
+                  Ayush is a BTech Computer Science student specializing in Cybersecurity & AI at UPES Dehradun. He has hands-on experience in hackathons, AI prototyping, browser extension development, and real-world problem solving focused on digital safety and scam detection.
+
+He has worked on projects including multilingual communication platforms, AI-powered security solutions, and privacy-focused mobile defense systems. Alongside development, he actively participates in hackathons, leadership programs, campus initiatives, and event management teams.
+
+Currently, he is exploring cybersecurity, cloud technologies, Generative AI, and modern web development while building practical products for real-world impact.
                 </p>
                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
                   Highly active in the Indian developer hackathon pipeline, he builds real-world applications that defend users from modern engineering vulnerability scams, malicious threat vectors, and linguistic barriers.
@@ -383,11 +387,11 @@ export default function App() {
                 </div>
                 <div>
                   <span className="block font-display font-extrabold text-[#FF4E00] text-xl md:text-2xl">4+</span>
-                  <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Scam Engines Built</span>
+                  <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Security Solutions Built</span>
                 </div>
                 <div>
                   <span className="block font-display font-extrabold text-[#FF4E00] text-xl md:text-2xl">Top 10</span>
-                  <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Solo Rank AMD</span>
+                  <span className="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Solo – AMD</span>
                 </div>
               </div>
             </div>
