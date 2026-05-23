@@ -376,7 +376,6 @@ He has worked on projects including multilingual communication platforms, AI-pow
 Currently, he is exploring cybersecurity, cloud technologies, Generative AI, and modern web development while building practical products for real-world impact.
                 </p>
                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
-                  Highly active in the Indian developer hackathon pipeline, he builds real-world applications that defend users from modern engineering vulnerability scams, malicious threat vectors, and linguistic barriers.
                 </p>
               </div>
 
@@ -499,9 +498,9 @@ Currently, he is exploring cybersecurity, cloud technologies, Generative AI, and
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-900 pb-6">
             <div className="space-y-1.5">
               <span className="font-mono text-[#FF4E00] text-xs font-semibold tracking-widest uppercase">04 // RECOGNITIONS</span>
-              <h3 className="font-display font-bold text-2xl md:text-3xl text-white tracking-tight">Hackathons & Accolades</h3>
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-white tracking-tight">Achievements & Experience</h3>
             </div>
-            <p className="font-mono text-xs text-slate-500">VERIFIED EXCELLENCE CRITERIA</p>
+            <p className="font-mono text-xs text-slate-500">HACKATHONS • LEADERSHIP • CERTIFICATIONS</p>
           </div>
 
           <div className="border border-slate-800 rounded-2xl bg-slate-900/20 backdrop-blur-md p-6 md:p-8 space-y-4">
