@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #050505;
+  --fg: #ffffff;
+  --accent: #FF4E00;
+  --accent-hover: #e04100;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  /* Premium glow tokens */
+  --glow-orange: rgba(255, 78, 0, 0.10);
+  --glow-orange-soft: rgba(255, 78, 0, 0.04);
+  --glow-orange-bloom: rgba(255, 120, 30, 0.06);
+  --card-depth: 0 8px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.03);
+  --card-glow: 0 0 28px rgba(255, 78, 0, 0.05), 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* Base style resets */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #f8fafc;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  /* Richer ambient background — warm orange ember deep in the upper-right, cooler bottom */
+  background:
+    radial-gradient(ellipse 80% 50% at 78% 10%, #180902 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 20% 85%, #0c0402 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 50% 50%, #080502 0%, transparent 70%),
+    #050505;
+  background-attachment: fixed;
+}
+
+/* ── Grain overlay — slightly richer for depth ── */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.032;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
+
+/* ── Ambient orange bloom layer — fixed, behind everything ── */
+.ambient-bloom {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 45% at 75% 8%, rgba(255, 78, 0, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 15% 90%, rgba(200, 60, 0, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 20% at 50% 50%, rgba(255, 100, 20, 0.015) 0%, transparent 60%);
+}
+
+/* ── Premium scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 78, 0, 0.2);
+  border-radius: 9999px;
+  border: 1px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+::selection {
+  background-color: rgba(255, 78, 0, 0.28);
+  color: #ffffff;
+}
+
+/* ── Animations ── */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
+@keyframes bloom-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%       { opacity: 0.75; transform: scale(1.02); }
+}
+
+.animate-float  { animation: float-gentle  6s ease-in-out infinite; }
+.animate-glow   { animation: glow-pulse    3s ease-in-out infinite; }
+.animate-bloom  { animation: bloom-breathe 8s ease-in-out infinite; }
+
+/* ── Card depth helper ── */
+.card-premium {
+  box-shadow: var(--card-depth);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-premium:hover {
+  box-shadow: var(--card-glow);
+}
+
+/* ── Section heading accent line glow ── */
+.section-divider {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 78, 0, 0.5) 0%,
+    rgba(255, 78, 0, 0.15) 40%,
+    transparent 100%
+  );
+  height: 1px;
+  border: none;
+}
+
+/* ── Stat number glow ── */
+.stat-glow {
+  text-shadow:
+    0 0 16px rgba(255, 78, 0, 0.35),
+    0 0 32px rgba(255, 78, 0, 0.12);
+}
+
+/* ── Orange accent text glow ── */
+.accent-glow {
+  text-shadow: 0 0 12px rgba(255, 78, 0, 0.25);
+}
+
+/* ── Input focus ring upgrade ── */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 1px rgba(255, 78, 0, 0.3), 0 0 8px rgba(255, 78, 0, 0.06);
+}
