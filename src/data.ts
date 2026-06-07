@@ -46,7 +46,7 @@ export const defaultPortfolioData: PortfolioData = {
     },
     {
       category: "Web & Mobile",
-      items: ["HTML", "CSS", "JSON", "Kotlin"]
+      items: ["HTML", "CSS","React.js", "Node.js", "Flutter", "JSON", "Kotlin"]
     },
     {
       category: "AI / ML & Core CS",
@@ -58,7 +58,7 @@ export const defaultPortfolioData: PortfolioData = {
     },
     {
       category: "Security",
-      items: ["Cybersecurity", "Kali Linux", "Linux"]
+      items: ["Cybersecurity", "OSINT", "Kali Linux", "Shodan", "Nmap"]
     },
     {
       category: "Soft Skills",
@@ -101,29 +101,39 @@ export const defaultPortfolioData: PortfolioData = {
   ],
   achievements: [
     {
+      title: "Agentic Premier League (APL) 2026 – Solo Finalist(Build with AI)",
+      organization: "Google Developer Group, Lucknow",
+      highlight: true
+    },
+    {
       title: "AMD Slingshot Hackathon (2026) – Top 50 Team Selection",
-      organization: "AMD & IIIT Delhi",
+      organization: "AMD, Jaipur",
       highlight: true
     },
     {
       title: "AMD Slingshot Hackathon (2026) – Top 10 Solo Rank",
-      organization: "AMD",
+      organization: "AMD, Jaipur",
       highlight: true
     },
     {
-      title: "Google Gemini Student Ambassador (2026) – Round 2 Selection",
-      organization: "Google",
+      title: "Chief Staff – AMD Slingshot Grand Finale 2026",
+      organization: "AMD, Zorba, Gurugram",
       highlight: true
     },
     {
       title: "Crew Team Member – AMD Slingshot Hackathon 2026",
-      organization: "IIIT Delhi",
+      organization: "AMD, IIIT Delhi",
       highlight: false
     },
     {
       title: "Event Staff Team Member – Prompt War 2026",
       organization: "Google Signature Tower D, Gurugram",
       highlight: false
+    },
+    {
+      title: "Google Gemini Student Ambassador (2026) – Round 2 Selection",
+      organization: "Google",
+      highlight: true
     },
     {
       title: "Google Cloud Scholar – Applied Generative AI, Kubernetes & MLOps",
